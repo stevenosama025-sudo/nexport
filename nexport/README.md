@@ -27,7 +27,7 @@ NexPort includes a built-in automated compiler and installer that configures the
 
 ```bash
 # 1. Clone the repository and enter the project folder:
-git clone [https://github.com/YOUR_USERNAME/nexport.git](https://github.com/YOUR_USERNAME/nexport.git)
+git clone https://github.com/stevenosama025-sudo/nexport.git
 cd nexport
 
 # 2. Grant execution permissions to the main script:
