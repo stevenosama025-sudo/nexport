@@ -2,9 +2,9 @@
 
 > **Professional Network Port Intelligence & Live Threat Intelligence Platform**
 >
-> **Developed by:** [Steven Osama](https://github.com/stevenosama025-sudo) (Alias: **zeroman**)
-> **Official Repository:** [https://github.com/stevenosama025-sudo/nexport.git](https://github.com/stevenosama025-sudo/nexport.git)
-> **Copyright:** © 2026 Steven Osama (zeroman). All rights reserved.
+> **Developed by:** [Steven Osama](https://github.com/stevenosama025-sudo) (Alias: **zeroman**)  
+> **Official Repository:** [https://github.com/stevenosama025-sudo/nexport.git](https://github.com/stevenosama025-sudo/nexport.git)  
+> **Copyright:** © 2026 Steven Osama (zeroman). All rights reserved.  
 > **Lead Developer:** Steven Osama | **GitHub:** [@stevenosama025-sudo](https://github.com/stevenosama025-sudo)
 
 ---
