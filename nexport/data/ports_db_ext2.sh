@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
+# Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo
+
 PORT_DATA["1100"]="1100|MCTP|TCP/UDP|NO|MGMT|MC-FTP / Management|Management control transfer protocol. Investigate specific service.|MEDIUM|-|-"
 PORT_DATA["1102"]="1102|ADOBE-SERVER-1|TCP|NO|DEV|Adobe Server 1|Adobe Server network protocol — used by Adobe products for asset management. Restrict to Adobe Creative Cloud infrastructure.|MEDIUM|-|-"
 PORT_DATA["1104"]="1104|XRL|TCP/UDP|NO|DISTRIBUTED|XRL Transport|eXtensible Remote Linking transport. Distributed linking protocol.|LOW|-|-"
