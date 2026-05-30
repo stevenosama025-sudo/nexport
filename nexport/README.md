@@ -3,9 +3,9 @@
 > **Professional Network Port Intelligence & Penetration Testing Automation Utility**
 > 
 > **Developed by:** [Steven Osama](https://github.com/stevenosama025-sudo) (Alias: **zeroman**)  
-> **Official Repository:** [https://github.com/stevenosama025-sudo/nexport.git](https://github.com/stevenosama025-sudo/nexport.git)
-> Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
-> Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo.
+> **Official Repository:** [https://github.com/stevenosama025-sudo/nexport.git](https://github.com/stevenosama025-sudo/nexport.git)  
+> **Copyright:** © 2026 Steven Osama (zeroman). All rights reserved.  
+> **Lead Developer:** Steven Osama | **GitHub:** [@stevenosama025-sudo](https://github.com/stevenosama025-sudo)
 
 ---
 
