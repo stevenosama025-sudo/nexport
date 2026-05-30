@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
+# Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo
+
 declare -A PORT_DATA=(
 
   ["20"]="20|FTP-DATA|TCP|NO|FILE|FTP Data Transfer|Active-mode FTP data channel. Carries actual file content. Avoid entirely — replace with SFTP (port 22) or FTPS (990). Firewall breaks active FTP.|HIGH|-|-"
