@@ -304,27 +304,24 @@ brew install jq           # macOS
 ## 📜 License
 
 ```
-# ==============================================================================
-# ⚖️ COPYRIGHT, INTELLECTUAL PROPERTY, AND ANTI-PIRACY NOTICE
-# ==============================================================================
-# Copyright (c) 2026 NexPort Core Developers. All rights reserved.
+################################################################################
+# PROPRIETARY AND CONFIDENTIAL
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
 #
-# This software, its source code, algorithmic logic, and the embedded core
-# database (consisting of 1,700+ security-mapped network ports, CVE records, 
-# and protocol definitions) are the exclusive intellectual property of the 
-# original author.
+# INTELLECTUAL PROPERTY NOTICE:
+# This software, including the source code, algorithmic logic, and custom 
+# modular structures, is the exclusive intellectual property of the author.
 #
-# ALL RIGHTS RESERVED. UNDER NO CIRCUMSTANCES IS IT PERMITTED TO:
-# 1. Copy, modify, alter, or redistribute this script or any of its modules.
-# 2. Extract, reverse-engineer, or re-bundle the 1,700+ port database into 
-#    any third-party software, scripts, or commercial products.
-# 3. Remove, obscure, or alter this copyright notice from the source code.
+# STRICT PROHIBITION:
+# 1. Reverse-Engineering, decompiling, or extracting the core logic is forbidden.
+# 2. Creating derivative works or bundling this software is strictly prohibited.
+# 3. Altering or removing this copyright notice is a violation of law.
 #
-# THIS SOFTWARE IS PROVIDED "AS IS" FOR AUTHORIZED PENETRATION TESTING AND 
-# EDUCATIONAL PURPOSES ONLY. UNAUTHORIZED REPRODUCTION OR DISTRIBUTION OF 
-# THIS PROGRAM IS A SEVERE VIOLATION OF INTERNATIONAL INTELLECTUAL PROPERTY 
-# LAWS AND WILL BE PROSECUTED TO THE FULLEST EXTENT OF THE LAW.
-# ==============================================================================
+# LEGAL DISCLAIMER:
+# This software is provided "AS IS" for authorized security auditing ONLY.
+# Any violation of these terms will be met with full legal action.
+################################################################################
+
 ```
 
 ---
