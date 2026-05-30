@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
+# Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo
+
 PORT_DATA["6000"]="6000|X11|TCP|NO|REMOTE|X Window System|X11 display server protocol. Completely unencrypted graphical sessions. Allows remote window injection and keystroke capture. Use SSH X11 forwarding with ForwardX11Trusted no. Never expose publicly.|HIGH|-|-"
 PORT_DATA["6001"]="6001|X11-DISPLAY1|TCP|NO|REMOTE|X11 Display :1|Second X11 display. Same cleartext exposure as 6000. SSH tunnel required.|HIGH|-|-"
 PORT_DATA["6002"]="6002|X11-DISPLAY2|TCP|NO|REMOTE|X11 Display :2|Third X11 display. Unencrypted desktop.|HIGH|-|-"
