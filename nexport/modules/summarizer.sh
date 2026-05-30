@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
+# Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo
+
 summarize_paste_mode() {
   clear
   echo -e "\n  ${BOLD}${CYAN}NexPort — Paste-and-Summarize Mode${RESET}"
