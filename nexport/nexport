@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-NEXPORT_VERSION="3.0"
 NEXPORT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 NEXPORT_INSTALL_PATH="/usr/local/bin/nexport"
 NEXPORT_INSTALL_DIR="/usr/local/lib/nexport"
@@ -19,6 +18,7 @@ source "$NEXPORT_DIR/modules/quiz.sh"
 source "$NEXPORT_DIR/modules/nmap_scan.sh"
 source "$NEXPORT_DIR/modules/summarizer.sh"
 source "$NEXPORT_DIR/modules/export.sh"
+source "$NEXPORT_DIR/modules/api_intel.sh"
 
 _nexport_install() {
   if [[ $EUID -ne 0 ]]; then
@@ -27,7 +27,7 @@ _nexport_install() {
     return 1
   fi
 
-  echo -e "\n  ${CYAN}Installing NexPort v${NEXPORT_VERSION} to system...${RESET}"
+  echo -e "\n  ${CYAN}Installing NEXPORT to system...${RESET}"
 
   if [[ -d "$NEXPORT_INSTALL_DIR" ]]; then
     rm -rf "$NEXPORT_INSTALL_DIR"
@@ -55,6 +55,7 @@ source "\$NEXPORT_DIR/modules/quiz.sh"
 source "\$NEXPORT_DIR/modules/nmap_scan.sh"
 source "\$NEXPORT_DIR/modules/summarizer.sh"
 source "\$NEXPORT_DIR/modules/export.sh"
+source "\$NEXPORT_DIR/modules/api_intel.sh"
 source "$NEXPORT_INSTALL_DIR/nexport_main.sh" "\$@"
 WRAPPER
 
@@ -79,7 +80,7 @@ _nexport_uninstall() {
 
 show_help() {
   clear
-  echo -e "\n  ${BOLD}${CYAN}╔══ NexPort v${NEXPORT_VERSION} — Command Reference ═══════════════════════════════╗${RESET}"
+  echo -e "\n  ${BOLD}${CYAN}╔══ NEXPORT — Command Reference ════════════════════════════════════════╗${RESET}"
   echo -e "  ${CYAN}║${RESET}"
   echo -e "  ${CYAN}║${RESET}  ${BOLD}${WHITE}LOOKUP${RESET}"
   echo -e "  ${CYAN}║${RESET}  ${GREEN}-h <port|name>${RESET}       Deep info on a port    ${DIM}(-h 22, -h ssh, -h 443)${RESET}"
@@ -99,6 +100,14 @@ show_help() {
   echo -e "  ${CYAN}║${RESET}  ${GREEN}paste${RESET}                Paste existing nmap output for analysis"
   echo -e "  ${CYAN}║${RESET}  ${GREEN}summarize${RESET}            Alias for paste mode"
   echo -e "  ${CYAN}║${RESET}"
+  echo -e "  ${CYAN}║${RESET}  ${BOLD}${WHITE}LIVE THREAT INTEL${RESET}  ${RED}★ NEW${RESET}"
+  echo -e "  ${CYAN}║${RESET}  ${GREEN}intel set-key <key>${RESET}  Save your Shodan API key"
+  echo -e "  ${CYAN}║${RESET}  ${GREEN}intel clear-key${RESET}      Remove saved Shodan API key"
+  echo -e "  ${CYAN}║${RESET}  ${GREEN}intel <ip>${RESET}           On-demand Shodan + CVE lookup for a public IP"
+  echo -e "  ${CYAN}║${RESET}  ${GREEN}intel help${RESET}           Show full intel command reference"
+  echo -e "  ${CYAN}║${RESET}  ${GRAY}  └─ Shodan data also auto-appended after every ${GREEN}scan${GRAY} run${RESET}"
+  echo -e "  ${CYAN}║${RESET}  ${GRAY}  └─ CVE lookup via CIRCL (cve.circl.lu) runs automatically${RESET}"
+  echo -e "  ${CYAN}║${RESET}"
   echo -e "  ${CYAN}║${RESET}  ${BOLD}${WHITE}EXPORT${RESET}"
   echo -e "  ${CYAN}║${RESET}  ${GREEN}export json${RESET}          Export full database as JSON"
   echo -e "  ${CYAN}║${RESET}  ${GREEN}export csv${RESET}           Export as CSV spreadsheet"
@@ -115,7 +124,7 @@ show_help() {
   echo -e "  ${CYAN}║${RESET}"
   echo -e "  ${CYAN}║${RESET}  ${BOLD}${WHITE}EXAMPLES${RESET}"
   echo -e "  ${CYAN}║${RESET}  ${GRAY}-h 443  │  -s database  │  -c web  │  scan 192.168.1.0/24${RESET}"
-  echo -e "  ${CYAN}║${RESET}  ${GRAY}export html  │  -r high  │  --cve CVE-2017-0144  │  -q${RESET}"
+  echo -e "  ${CYAN}║${RESET}  ${GRAY}export html  │  intel set-key <key>  │  intel 8.8.8.8${RESET}"
   echo -e "  ${CYAN}║${RESET}"
   echo -e "  ${BOLD}${CYAN}╚══════════════════════════════════════════════════════════════════════╝${RESET}"
   echo ""
@@ -131,7 +140,7 @@ _dispatch() {
     "--help")
       show_help ;;
     "--version")
-      echo -e "\n  ${CYAN}NexPort v${NEXPORT_VERSION}${RESET}\n" ;;
+      echo -e "\n  ${CYAN}NEXPORT — Intelligent Threat Analysis Suite${RESET}\n" ;;
     "--install")
       _nexport_install ;;
     "--uninstall")
@@ -158,6 +167,8 @@ _dispatch() {
       summarize_paste_mode ;;
     "export")
       [[ -z "$args" ]] && echo -e "\n  ${RED}Usage: export <json|csv|markdown|html>${RESET}\n" || export_db "$args" ;;
+    "intel")
+      intel_dispatch $args ;;
     "-q"|"--quiz")
       quiz_mode ;;
     "exit"|"quit"|"q")
@@ -192,6 +203,7 @@ _handle_cli_args() {
     "--install")         _nexport_install ;;
     "--uninstall")       _nexport_uninstall ;;
     "paste"|"summarize") _dispatch "paste" ;;
+    "intel")             intel_dispatch "${@}" ;;
     *)                   lookup_port "$cmd" ;;
   esac
 }

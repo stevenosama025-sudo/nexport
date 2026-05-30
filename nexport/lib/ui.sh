@@ -20,7 +20,7 @@ BANNER
   echo -e "  ${DIM}╔════════════════════════════════════════════════════════════════════╗${RESET}"
   echo -e "  ${DIM}║${RESET}  ${BOLD}${CYAN}v3.0${RESET}  ${GRAY}│${RESET}  ${WHITE}Professional Network Port Intelligence Tool${RESET}           ${DIM}║${RESET}"
   echo -e "  ${DIM}║${RESET}  ${GRAY}500+ ports · CVE Database · Nmap Scan Engine · Export Suite${RESET}    ${DIM}║${RESET}"
-  echo -e "  ${DIM}║${RESET}  ${GRAY}Modular Architecture · Zero-Comment Codebase · Quiz Mode${RESET}       ${DIM}║${RESET}"
+  echo -e "  ${DIM}║${RESET}  ${GRAY}Modular Architecture · Quiz Mode${RESET}                               ${DIM}║${RESET}"
   echo -e "  ${DIM}╚════════════════════════════════════════════════════════════════════╝${RESET}"
   echo ""
   echo -e "  ${YELLOW}[*]${RESET} ${GREEN}-h <port|name>${RESET} deep lookup    ${GRAY}│${RESET}  ${GREEN}-a${RESET} list all ports"

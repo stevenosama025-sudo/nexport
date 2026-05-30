@@ -265,5 +265,4 @@ declare -A PORT_DATA=(
   ["50000"]="50000|JENKINS-AGENT|TCP|NO|DEV|Jenkins CI/CD Agent|Jenkins build agent communication port. Restrict to Jenkins controller only. Unrestricted access allows arbitrary code execution via build jobs.|HIGH|-|-"
   ["50070"]="50070|HADOOP-NAMENODE|TCP|NO|DISTRIBUTED|Hadoop NameNode Web UI|Hadoop HDFS NameNode web interface. Contains cluster topology and file system structure. Firewall to admin users only.|HIGH|-|-"
   ["51820"]="51820|WIREGUARD|UDP|YES|VPN|WireGuard VPN|Modern high-performance VPN protocol. Minimal attack surface. ChaCha20-Poly1305 AEAD encryption. Curve25519 key exchange. Preferred VPN solution.|LOW|-|-"
-
 )
