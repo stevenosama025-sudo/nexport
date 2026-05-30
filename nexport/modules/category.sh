@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
+# Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo
+
 list_categories() {
   clear
   echo -e "\n  ${BOLD}${WHITE}Port Categories  ($(port_count) total ports)${RESET}\n"
