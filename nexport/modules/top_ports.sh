@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
+# Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo
+
 show_top_ports() {
   clear
   echo -e "\n  ${BOLD}${RED}TOP 30 MOST TARGETED PORTS${RESET}"
