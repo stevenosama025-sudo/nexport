@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
+# Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo
+
 PORT_DATA["3"]="3|COMPRESSNET|TCP/UDP|NO|NETWORK|Compression Process|IANA-assigned management utility for compression process. No modern deployment. Historic protocol used in early ARPANET experimental compression. If seen open, investigate — no legitimate modern use.|LOW|-|-"
 PORT_DATA["5"]="5|RJE|TCP|NO|NETWORK|Remote Job Entry|Early IBM remote batch job submission protocol from mainframe era. Completely obsolete. Presence indicates very old or misconfigured system.|LOW|-|-"
 PORT_DATA["8"]="8|MSG-SEND|TCP/UDP|NO|NETWORK|Message Send Protocol|Historic inter-process messaging. Obsolete since early 1990s. Never expose. If running indicates legacy mainframe environment.|LOW|-|-"
