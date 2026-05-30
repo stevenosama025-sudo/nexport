@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Copyright (c) 2026 Steven Osama (zeroman). All rights reserved.
+# Lead Developer: Steven Osama | GitHub: @stevenosama025-sudo
+
 lookup_port() {
   local query="${1,,}"
   local raw="$1"
