@@ -1,8 +1,13 @@
 # 🚀 NexPort v3.0
 
 > **Professional Network Port Intelligence & Penetration Testing Automation Utility**
+> 
+> **Developed by:** [Steven Osama](https://github.com/stevenosama025-sudo) (Alias: **zeroman**)  
+> **Official Repository:** [https://github.com/stevenosama025-sudo/nexport.git](https://github.com/stevenosama025-sudo/nexport.git)
 
-NexPort v3.0 is an advanced, high-performance security reconnaissance tool tailored for **Kali Linux**. It bridges the gap between raw network scanning and actionable vulnerability intelligence. By automating live `Nmap` analysis and mapping discovered ports to an extensive internal vulnerability database, NexPort gives security analysts a crystal-clear overview of historical CVEs, protocol details, encryption status, and potential exploit vectors in milliseconds.
+---
+
+NexPort v3.0 is an advanced, high-performance security reconnaissance and automation tool tailored for **Kali Linux** and security operations. Designed and engineered by cybersecurity professional **Steven Osama (zeroman)**, it bridges the gap between raw network scanning and actionable vulnerability intelligence. By automating live `Nmap` analysis and mapping discovered ports to an extensive internal vulnerability database, NexPort gives security analysts a crystal-clear overview of historical CVEs, protocol details, encryption status, and potential exploit vectors in milliseconds.
 
 Wrapped in a stunning, high-contrast **Cyberpunk ANSI neon interface**, NexPort ensures maximum data scannability under critical engagement timelines.
 
@@ -21,13 +26,13 @@ Wrapped in a stunning, high-contrast **Cyberpunk ANSI neon interface**, NexPort 
 
 ## ⚙️ System Installation & Global Deployment
 
-NexPort includes a built-in automated compiler and installer that configures the global environment variables for you, allowing the tool to run globally like native utilities (e.g., `nmap` or `msfconsole`).
+NexPort includes a built-in automated compiler and installer configured by **zeroman** that deploys the global environment variables for you, allowing the tool to run globally like native utilities (e.g., `nmap` or `msfconsole`).
 
 ### 🛠️ Step-by-Step Installation & Usage:
 
 ```bash
-# 1. Clone the repository and enter the project folder:
-git clone https://github.com/stevenosama025-sudo/nexport.git
+# 1. Clone the official repository and enter the project folder:
+git clone [https://github.com/stevenosama025-sudo/nexport.git](https://github.com/stevenosama025-sudo/nexport.git)
 cd nexport
 
 # 2. Grant execution permissions to the main script:
